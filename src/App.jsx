@@ -11,6 +11,7 @@ import { ThemeProvider } from "@emotion/react";
 import InicioSesion from "./Pages/InicioSesion";
 import "./App.css";
 import BuscarPaciente from "./Pages/BuscarPaciente";
+import Odontograma from "./Pages/Odontograma";
 
 function App() {
   const router = createBrowserRouter(
@@ -18,18 +19,28 @@ function App() {
       <Route element={<Layout />}>
         <Route path="/" element={<InicioSesion />} />
         <Route path="/buscar-paciente" element={<BuscarPaciente />} />
+        <Route path="/odontograma" element={<Odontograma />} />
       </Route>
     )
   );
 
   const theme = createTheme({
     palette: {
-      mode: "dark",
+      mode: "light",
       primary: {
-        main: "#818589",
+        main: "#002a3a",
       },
       secondary: {
-        main: "#edeade",
+        main: "#e4e1d6",
+      },
+      success: {
+        main: "#30a489",
+      },
+      error: {
+        main: "#dd614a",
+      },
+      info: {
+        main: "#9fd8cb",
       },
     },
   });
